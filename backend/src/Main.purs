@@ -17,4 +17,4 @@ main :: ServerM
 main =
   serve { port: 8080 } { route, router }
   where
-  router { route: Hello name } = ok $ "hello " <> name
+  router { route: Hello name } = ok $ "hello  <> name
