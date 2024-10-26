@@ -2,7 +2,6 @@ module Main where
 
 import HTTPurple (class Generic, RouteDuplex', ServerM, mkRoute, ok, serve)
 import HTTPurple as RG
-import Prelude (($))
 
 data Route = Hello
 
@@ -17,4 +16,4 @@ main :: ServerM
 main =
   serve { port: 8080 } { route, router }
   where
-  router { route: Hello } = ok $ "hello world"
+  router { route: Hello } = ok "hello world"
