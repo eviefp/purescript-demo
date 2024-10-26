@@ -28,6 +28,7 @@
             # that builds the Purescript backend.
             backend = pkgs.callPackage ./backend { };
           };
+
           devShells.default = pkgs.mkShell {
             buildInputs = with pkgs; [
               inputs.spago2nix.packages."${system}".spago2nix
